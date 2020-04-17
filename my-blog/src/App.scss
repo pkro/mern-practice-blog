@@ -1,3 +1,7 @@
+$navbarbg: #eeeeee;
+@mixin debug($color: green) {
+  border: 1px solid $color;
+}
 #page-body {
   max-width: 75%;
   margin: auto;
@@ -7,4 +11,27 @@
 
 .navbar {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: bottom;
+  background-color: $navbarbg;
+  ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    li {
+      padding: 0 20px;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: auto 1rem;
+}
+.btn {
 }
