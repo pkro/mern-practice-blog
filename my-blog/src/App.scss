@@ -9,21 +9,30 @@ $navbarbg: #eeeeee;
   /*border: 1px solid black;*/
 }
 
+body {
+  border-collapse: collapse;
+}
 .navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  vertical-align: bottom;
   background-color: $navbarbg;
+  height: 50px;
   ul {
-    display: flex;
     list-style-type: none;
-    justify-content: space-between;
     li {
       padding: 0 20px;
+      display: inline-block;
     }
     a {
       text-decoration: none;
+      color: black;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
     }
   }
 }
@@ -33,5 +42,16 @@ $navbarbg: #eeeeee;
   font-weight: bold;
   margin: auto 1rem;
 }
-.btn {
+
+.article-list {
+  ul {
+    list-style-type: none;
+    padding-left: 1rem;
+    li {
+      border-bottom: 1px solid black;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
 }
